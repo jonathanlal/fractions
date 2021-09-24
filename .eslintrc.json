@@ -15,6 +15,7 @@
       "required": {
         "some": [ "nesting", "id"  ]
       }
-    }]
+    }],
+    "@next/next/no-document-import-in-page": "off"
   }
 }
