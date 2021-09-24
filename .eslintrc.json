@@ -3,6 +3,7 @@
   "prettier"],
   "rules": {
     "react/prop-types": 0,
+    "react/display-name": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": "off",
     "jsx-a11y/label-has-associated-control": [ "error", {

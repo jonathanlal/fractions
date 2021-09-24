@@ -1,19 +1,16 @@
 import { signIn } from "next-auth/client";
+import { DefaultBtn } from "./atoms/buttons/DefaultBtn.component";
 
 export default function AccessDenied() {
   return (
     <>
       <h1>Access Denied</h1>
       <p>
-        <a
+        <DefaultBtn
           href="/api/auth/signin"
-          onClick={(e) => {
-            e.preventDefault();
-            signIn();
-          }}
-        >
-          You must be signed in to view this page
-        </a>
+          text="You must be signed in to view this page"
+          onClickFn={signIn}
+        />
       </p>
     </>
   );
