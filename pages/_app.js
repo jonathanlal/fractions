@@ -1,23 +1,12 @@
-import "../styles/globals.css";
+import { ThemeProvider } from "styled-components";
 import { Provider } from "next-auth/client";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+
+import useDarkMode from "use-dark-mode";
+import { darkTheme, lightTheme, GlobalStyles } from "layout/ThemeConfig";
 
 function MyApp({ Component, pageProps }) {
-  const theme = {
-    colors: {
-      primary: "#0070f3",
-    },
-  };
-
-  const GlobalStyles = createGlobalStyle`
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #3ebbbb;
-      color: #eaeaea;
-    }
-  `;
+  const darkmode = useDarkMode(true);
+  const theme = darkmode.value ? darkTheme : lightTheme;
 
   return (
     <Provider session={pageProps.session}>

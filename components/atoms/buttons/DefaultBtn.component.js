@@ -9,7 +9,7 @@ export const DefaultBtn = React.forwardRef(({ onClickFn, href, text }, ref) => {
   };
 
   return (
-    <StyledDefaultBtn>
+    <StyledDefaultBtn className="primary-button">
       <Link href={href} passHref>
         <a href={href} onClick={(e) => onClickAction(e)} ref={ref}>
           {text}
