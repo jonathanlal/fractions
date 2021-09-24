@@ -21,7 +21,7 @@ export default function Home() {
         <strong>Welcome {session.user.name}</strong> <br />
         Signed in as {session.user.email}
       </p>
-      <DefaultBtn text="Logout" onClickFn={signOut} />
+      <DefaultBtn text="Logout" onClickFn={signOut} href="/" />
     </>
   );
 }
